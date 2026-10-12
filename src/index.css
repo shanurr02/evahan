@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-canvas: #f8fafc;
+    --color-surface-card: #ffffff;
+    --color-surface-subtle: #f1f5f9;
+    --color-border-subtle: #e2e8f0;
+    --color-border-strong: #cbd5e1;
+    --color-primary-blue: #1e40af;
+    --color-primary-indigo: #4338ca;
+  }
+
+  html.dark,
+  body.dark {
+    --color-canvas: #000000;
+    --color-surface-card: #0a0a0c;
+    --color-surface-subtle: #060608;
+    --color-surface-control: #121216;
+    --color-surface-hover: #17171d;
+    --color-border-subtle: #202026;
+    --color-border-strong: #2c2c36;
+    background-color: #000000 !important;
+    color: #f4f4f5 !important;
+  }
+
+  html,
+  body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    font-family: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -0.015em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Professional Monospace Telemetry */
+  .font-mono-num {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* High-contrast Selection */
+  ::selection {
+    background-color: #1e40af;
+    color: #ffffff;
+  }
+
+  .dark ::selection {
+    background-color: #ef4444;
+    color: #ffffff;
+  }
+
+  /* Focus rings */
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none !important;
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 1px #2563eb !important;
+  }
+
+  .dark input:focus,
+  .dark select:focus,
+  .dark textarea:focus {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 1px #ef4444 !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #24242c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #ef4444;
+}
+
+/* Radar Pulse Animations */
+@keyframes red-radar-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.animate-red-radar {
+  animation: red-radar-pulse 2s infinite;
+}
+
+/* Professional ERP Buttons */
+.btn-erp-primary {
+  background-color: #1e40af;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-erp-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-erp-secondary {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-erp-secondary:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}

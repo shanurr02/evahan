@@ -1,0 +1,6 @@
+{
+  "name": "Fleet Command",
+  "description": "Enterprise SaaS Fleet Management, Vehicle Tracking & Telematics Analytics Platform.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
